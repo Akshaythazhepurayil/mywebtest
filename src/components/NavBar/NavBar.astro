@@ -1,0 +1,99 @@
+<nav class="p-5 bg-slate-500 shadow md:flex md:items-center md:justify-between">
+  <div class="flex justify-between items-center mx-2">
+    <a href="/">
+      <span class="text-2xl text-white cursor-pointer">Logo .</span>
+    </a>
+    <span class="text-3xl text-white corsur-pointer block md:hidden">
+      <img
+        id="img-change"
+        class="w-10"
+        onclick="Menu(this)"
+        src="assets/img/jpg/hamburger-icon.png"
+        alt=""
+      />
+    </span>
+  </div>
+  <ul
+    class="hidden md:flex md:items-center md:static absolute bg-slate-500 w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7"
+  >
+    <li class="m-4">
+      <a href="/" class="text-xl text-white hover:text-cyan-500 duration-500">
+        Home
+      </a>
+    </li>
+    <l class="m-4">
+      <a href="#" class="text-xl text-white hover:text-cyan-500 duration-500">
+        Service
+      </a>
+    </l>
+    <li class="m-4">
+      <a href="#" class="text-xl text-white hover:text-cyan-500 duration-500">
+        About
+      </a>
+    </li>
+    <li class="m-4">
+      <a href="#" class="text-xl text-white hover:text-cyan-500 duration-500">
+        Contact
+      </a>
+    </li>
+    <li class="m-4">
+      <a href="#" class="text-xl text-white hover:text-cyan-500 duration-500">
+        Blog
+      </a>
+    </li>
+    <button
+      class="bg-cyan-400 text-white px-3 py-2 rounded duration-300 hover:bg-cyan-500 m-4"
+    >
+      Get Started
+    </button>
+  </ul>
+  <ul
+    style="display: none;"
+    class="hidden md:items-center z-10 md:z-auto absolute bg-slate-500 w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7transition-all ease-in duration-500"
+    id="show-menu"
+  >
+    <li class="m-4 pl-3">
+      <a href="/" class="text-xl text-white hover:text-cyan-500 duration-500">
+        Home
+      </a>
+    </li>
+    <l class="m-4 pl-3">
+      <a href="#" class="text-xl text-white hover:text-cyan-500 duration-500">
+        Service
+      </a>
+    </l>
+    <li class="m-4 pl-3">
+      <a href="#" class="text-xl text-white hover:text-cyan-500 duration-500">
+        About
+      </a>
+    </li>
+    <li class="m-4 pl-3">
+      <a href="#" class="text-xl text-white hover:text-cyan-500 duration-500">
+        Contact
+      </a>
+    </li>
+    <li class="m-4 pl-3">
+      <a href="#" class="text-xl text-white hover:text-cyan-500 duration-500">
+        Blog
+      </a>
+    </li>
+    <li class=" m-4 pl-3">
+    <button
+      class="bg-cyan-400 text-white px-3 py-2 rounded duration-300 hover:bg-cyan-500"
+    >
+      Get Started
+    </button>
+    </li>
+  </ul>
+</nav>
+<script is:inline>
+  Menu = () => {
+    const show = document.getElementById("show-menu");
+    const img = document.getElementById("img-change");
+    show.style.display = show.style.display === "none" ? "block" : "none";
+    img.src =
+      show.style.display === "none"
+        ? "assets/img/jpg/hamburger-icon.png"
+        : "assets/img/jpg/close-icon.png";
+  };
+</script>

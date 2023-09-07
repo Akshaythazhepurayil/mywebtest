@@ -1,0 +1,27 @@
+---
+import NavBar from "../components/NavBar/NavBar.astro";
+import Footer from "../components/footer/Footer.astro";
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" />
+  </head>
+  <body>
+    <main>
+      <NavBar />
+      <div class="mx-auto px-5">
+      <slot />
+      </div>
+      <Footer />
+    </main>
+  </body>
+</html>

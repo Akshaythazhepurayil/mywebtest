@@ -1,0 +1,71 @@
+<div class="bg-slate-500 mx-auto p-5 flex justify-between flex-wrap md:flex-wrap">
+    <div class="max-w-xs">
+    <h1 class="text-2xl text-white cursor-pointer">Logo .</h1>
+    <p class="text-white text-[16px] leading-7 my-5">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+    </p>
+    </div>
+    <div class="max-w-xs">
+    <h1 class="text-xl text-white cursor-pointer">Address</h1>
+    <p class="text-white text-[16px] leading-5 my-5">
+        Lorem Ipsum is simply
+    </p>
+    <p class="text-white text-[16px] leading-5 my-5">
+        Lorem Ipsum is simply
+    </p>
+    <p class="text-white text-[16px] leading-5 my-5">
+        Lorem Ipsum is simply
+    </p>
+    </div>
+    <div class="max-w-xs">
+    <h1 class="text-xl text-white cursor-pointer">Quick Links</h1>
+    <p class="text-white text-[16px] leading-7 my-5">
+        About Us
+    </p>
+     <p class="text-white text-[16px] leading-7 my-5">
+        Contact Us
+    </p>
+     <p class="text-white text-[16px] leading-7 my-5">
+        Our Services
+    </p>
+     <p class="text-white text-[16px] leading-7 my-5">
+        Terms & Condition
+    </p>
+     <p class="text-white text-[16px] leading-7 my-5">
+        Support
+    </p>
+    </div>
+    <div class="max-w-xs">
+    <h1 class="text-xl text-white cursor-pointer">Newsletters</h1>
+    <p class="text-white text-[16px] leading-7 my-5">
+        Lorem Ipsum is simply dummy text of the printing and
+    </p>
+    <div class="bg-white flex justify-between items-center p-2 gap-4 rounded">
+        <input id="search" class="w-3/4 py-2 px-2 border-none outline-none" type="text" placeholder="Search" min="1" max="10"/>
+        
+        <button class="bg-cyan-500 w-1/4 p-2 text-white rounded-md">Search</button>
+    </div>
+    <p id="errorMessage" style="color: cyan;"></p>
+    </div>
+</div>
+
+<script is:inline>
+  const inputElement = document.getElementById("search");
+  const errorMessageElement = document.getElementById("errorMessage");
+
+  inputElement.addEventListener("input", function () {
+    const inputValue = inputElement.value;
+    const maxLength = 25;
+
+    if (inputValue.length > maxLength) {
+      errorMessageElement.textContent = "Input exceeds maximum length.";
+      inputElement.value = inputValue.slice(0, maxLength);
+    } else {
+      errorMessageElement.textContent = "";
+    }
+  });
+</script>
+
+
+
+
